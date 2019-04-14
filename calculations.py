@@ -1,5 +1,13 @@
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt 
+from astral import Astral, AstralGeocoder, Location
+import datetime
+
+
 def calc_group_size(stops_df, groupby_cols, include_prop = True):
-    groupby = phil_stops.groupby(groupby_cols).size().to_frame().reset_index()
+    groupby = stops_df.groupby(groupby_cols).size().to_frame().reset_index()
     groupby.columns = list(groupby_cols) + ['n']
     if include_prop:
         groupby['prop'] = groupby['n'] / len(stops_df)
@@ -7,10 +15,10 @@ def calc_group_size(stops_df, groupby_cols, include_prop = True):
 
 def calc_stop_rates(stops_df, population_df, groupby_cols):
     groupby_df = stops_df.groupby(groupby_cols).size().reset_index()
-    groupby_df.columns = groupby_cols + ['n']
-    merged = groupby_df.merge(population_df, on ='subject_race')
+    groupby_df.columns = list(groupby_cols) + ['n']
+    merged = groupby_df.merge(population_df, on = groupby_cols)
     merged['stop_rate'] = merged['n'] / merged['num_people']
-    return merged[['subject_race', 'stop_rate']]
+    return merged[list(groupby_cols) + ['stop_rate']]
 
 def calc_search_rates(stops_df, groupby_cols):
     groupby_df = stops_df.groupby(groupby_cols)['search_conducted'].mean().reset_index()
@@ -35,7 +43,7 @@ def compare_hit_rates(hit_rates, minority_races, index_cols):
     hit_rates = hit_rates.rename(columns = {'white': 'white_hit_rate'}).reset_index()
     hit_rates = hit_rates.melt(id_vars = list(index_cols) + ['white_hit_rate'])
     hit_rates = hit_rates.rename(columns = {'subject_race': 'minority_race', 'value': 'minority_hit_rate'})
-    hit_rates = hit_rates.sort_values(by = 'district')
+    hit_rates = hit_rates.sort_values(by = index_cols)
     return hit_rates.reset_index(drop = True)
 
 def plot_hit_rates_comparison(hit_rates_comparison, marker_size_col, marker_size_scale = 500):
