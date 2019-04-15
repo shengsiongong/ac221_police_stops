@@ -7,6 +7,20 @@ import datetime
 
 
 def calc_group_size(stops_df, groupby_cols, include_prop = True):
+    """
+    Calculates the size of the groups formed by grouping stops_df by groupby_cols.
+    
+    INPUTS
+    =======
+    stops_df: A pandas DataFrame that contains stops observations.
+    groupby_cols: A list of the name of columns of stops_df to groupby
+    include_prop: Whether to include the proportion of observations in each group in addition to the size.
+
+    RETURNS
+    ========
+    A pandas DataFrame with column 'n' that indicates the size of the group and potentially 'prop' that indicates
+    the proportion of observation in the group.
+    """
     groupby = stops_df.groupby(groupby_cols).size().to_frame().reset_index()
     groupby.columns = list(groupby_cols) + ['n']
     if include_prop:
@@ -14,59 +28,151 @@ def calc_group_size(stops_df, groupby_cols, include_prop = True):
     return groupby
 
 def calc_stop_rates(stops_df, population_df, groupby_cols):
+    """
+    Calculates the stop rates of the groups formed by grouping stops_df by groupby_cols. 
+    
+    INPUTS
+    =======
+    stops_df: A pandas DataFrame that contains stops observations.
+    population_df: A pandas DataFrame that contains the population number of each group.
+                   Function assumes the population number column is named 'num_people' 
+    groupby_cols: A list of the name of columns of stops_df and population_df.
+
+    RETURNS
+    ========
+    A pandas DataFrame with column 'n' that indicates the size of the groups and potentially 'prop' that indicates
+    the proportion of observation in the groups.
+    """
     groupby_df = stops_df.groupby(groupby_cols).size().reset_index()
     groupby_df.columns = list(groupby_cols) + ['n']
     merged = groupby_df.merge(population_df, on = groupby_cols)
     merged['stop_rate'] = merged['n'] / merged['num_people']
     return merged[list(groupby_cols) + ['stop_rate']]
 
-def calc_search_rates(stops_df, groupby_cols):
-    groupby_df = stops_df.groupby(groupby_cols)['search_conducted'].mean().reset_index()
+def calc_search_rates(stops_df, groupby_cols, search_column = 'search_conducted'):
+    """
+    Calculates the search rates of the groups formed by grouping stops_df by groupby_cols. 
+    
+    INPUTS
+    =======
+    stops_df: A pandas DataFrame that contains stops observations. 
+    groupby_cols: A list of the name of columns of stops_df to groupby
+    search_column: A string indicating the name of the search column. 
+                     Function assumes that search column is named 'search_conducted' by default.
+
+    RETURNS
+    ========
+    A pandas DataFrame with column 'search_rate' that indicates the search rates of the groups.
+    """    
+    groupby_df = stops_df.groupby(groupby_cols)[search_column].mean().reset_index()
+    groupby_df = groupby_df.dropna()
+    groupby_df = groupby_df.reset_index(drop = True)
     groupby_df.columns = groupby_cols + ['search_rate']
     return groupby_df
 
-def calc_frisk_rates(stops_df, groupby_cols):
-    groupby_df = stops_df.groupby(groupby_cols)['frisk_performed'].mean().reset_index()
+def calc_frisk_rates(stops_df, groupby_cols, frisk_column = 'frisk_performed'):
+    """
+    Calculates the frisk rates of the groups formed by grouping stops_df by groupby_cols. 
+    
+    INPUTS
+    =======
+    stops_df: A pandas DataFrame that contains stops observations. 
+    groupby_cols: A list of the name of columns of stops_df to groupby
+    frisk_column: A string indicating the name of the frisk column. 
+                     Function assumes that frisk column is named 'frisk_performed' by default.
+
+    RETURNS
+    ========
+    A pandas DataFrame with column 'frisk_rate' that indicates the frisk rates of the groups.
+    """    
+    groupby_df = stops_df.groupby(groupby_cols)[frisk_column].mean().reset_index()
+    groupby_df = groupby_df.dropna()
+    groupby_df = groupby_df.reset_index(drop = True)
     groupby_df.columns = groupby_cols + ['frisk_rate']
     return groupby_df
 
-def calc_hit_rates(stops_df, groupby_cols):
-    groupby_df = stops_df.groupby(groupby_cols)['contraband_found'].mean().reset_index()
+def calc_hit_rates(stops_df, groupby_cols, contraband_column = 'contraband_found'):
+    """
+    Calculates the hit rates for contrabands of the groups formed by grouping stops_df by groupby_cols. 
+    
+    INPUTS
+    =======
+    stops_df: A pandas DataFrame that contains stops observations. 
+    groupby_cols: A list of the name of columns of stops_df to groupby
+    contraband_column: A string indicating the name of the contraband column. 
+                     Function assumes that contraband column is named 'contraband_found' by default.
+
+    RETURNS
+    ========
+    A pandas DataFrame with column 'hit_rate' that indicates the hit rates of the groups.
+    """    
+    groupby_df = stops_df.groupby(groupby_cols)[contraband_column].mean().reset_index()
     groupby_df = groupby_df.dropna()
     groupby_df = groupby_df.reset_index(drop = True)
     groupby_df.columns = groupby_cols + ['hit_rate']
     return groupby_df
 
-def compare_hit_rates(hit_rates, minority_races, index_cols):
-    hit_rates = hit_rates[hit_rates['subject_race'].isin(['white'] + minority_races)]
-    hit_rates = hit_rates.set_index(list(index_cols) + ['subject_race'])['hit_rate'].unstack(fill_value = 0)
-    hit_rates = hit_rates.rename(columns = {'white': 'white_hit_rate'}).reset_index()
-    hit_rates = hit_rates.melt(id_vars = list(index_cols) + ['white_hit_rate'])
-    hit_rates = hit_rates.rename(columns = {'subject_race': 'minority_race', 'value': 'minority_hit_rate'})
+def compare_hit_rates(hit_rates, majority_group, minority_groups, group_col):
+    """
+    Compares the hit rates between a majority group in a column (i.e. race) and specificed minority groups
+    accounting for other group information such as district.
+    
+    INPUTS
+    =======
+    hit_rates: A pandas DataFrame that contains information about the hit rate of each group.
+               Should contain the column 'hit_rate'.
+               The function calc_his_rates() makes a valid DataFrame for this function.
+    majority_group: A string indicating the majority group.
+    minority_groups: A list of strings indicating the majority groups.
+    group_col: A string indicating the name of the column that indicates the group of the observation.
+
+    RETURNS
+    ========
+    A pandas DataFrame in which each row compares the hit rate between the majority group and one of the minority
+    groups accounting for the other columns not used in the hit_rates columns.
+    """    
+    index_cols = set(hit_rates.columns) - set([group_col])
+    index_cols.remove('hit_rate')
+    index_cols = list(index_cols)
+    hit_rates = hit_rates[hit_rates[group_col].isin([majority_group] + list(minority_groups))]
+    hit_rates = hit_rates.set_index(list(index_cols) + [group_col])['hit_rate'].unstack(fill_value = 0)
+    hit_rates = hit_rates.rename(columns = {majority_group: majority_group + '_hit_rate'}).reset_index()
+    hit_rates = hit_rates.melt(id_vars = list(index_cols) + [majority_group + '_hit_rate'])
+    hit_rates = hit_rates.rename(columns = {group_col: 'minority_group', 'value': 'minority_hit_rate'})
     hit_rates = hit_rates.sort_values(by = index_cols)
     return hit_rates.reset_index(drop = True)
 
-def plot_hit_rates_comparison(hit_rates_comparison, marker_size_col, marker_size_scale = 500):
-    g = sns.FacetGrid(hit_rates_comparison, col="minority_race", height = 5)
-    g.map(plt.grid)
-    g.map_dataframe(plt.plot, [0, 1], [0,1], 'r--', color = 'black')
-    if marker_size_col is not None:
-        g.map(plt.scatter, "white_hit_rate", "minority_hit_rate", color = 'black', facecolors = 'none', 
-                            s = hit_rates_comparison[marker_size_col] / marker_size_scale).set(
-                            xlim=(-0.05,1.05) , ylim=(-0.05,1.05), xlabel = 'White hit rate', ylabel = 'Minority hit rate')
-    else:
-        g.map(plt.scatter, "white_hit_rate", "minority_hit_rate", color = 'black').set(
-                            xlim=(-0.05,1.05) , ylim=(-0.05,1.05), xlabel = 'White hit rate', ylabel = 'Minority hit rate')
-    g.add_legend();
+def calc_sunset_times(stops_df, latitude, longitude, timezone, date_col = 'date'):
+    """
+    Calculates the sunset times for all unique dates in stops_df using the provided latitude and longitude using the given
+    timezone. 
+ 
+    INPUTS
+    =======
+    stops_df: A pandas DataFrame that contains stops observations.
+    latitude: An object that can be converted to a float that represents the latitude
+    longitude: An object that can be converted to a float that represents the longitude
+    timezone: A string indicating the timezone to calculate the times in. 
+              For a list of accepted arguments for timezone, use the follow code:
 
-def calc_sunset_times(stops_df, latitude, longitude, timezone):
+              from pytz import all_timezones
+              for timezone in all_timezones:
+                  print(timezone)
+    date_col: A string indicating the date column on stops_df. By default assumes it is 'date'. 
+    
+    RETURNS
+    ========
+    A pandas DataFrame in which each row contains information about a date, with column 'sunset' representing sunset
+    time, 'dusk' representing dusk time, 'sunset_minutes' representing sunset time in minutes, and 'dusk_minutes' representing
+    dusk time in minutes.
+    """
     l = Location()
     l.solar_depression = 'civil'
-    l.latitude = latitude
-    l.longitude = longitude
+    l.latitude = float(latitude)
+    l.longitude = float(longitude)
     l.timezone = timezone
     l.elevation = 0   
-    unique_dates = list(stops_df['date'].unique())
+    unique_dates = list(stops_df[date_col].unique())
     sunset = [l.sun(pd.Timestamp(date), local = True)['sunset'].time() for date in unique_dates]
     dusk = [l.sun(pd.Timestamp(date), local = True)['dusk'].time() for date in unique_dates]
     sunset_minutes = [time.hour * 60 + time.minute for time in sunset]
@@ -75,9 +181,25 @@ def calc_sunset_times(stops_df, latitude, longitude, timezone):
     sunset_times.columns = ['date', 'sunset', 'dusk', 'sunset_minute', 'dusk_minute']
     return sunset_times
 
-def get_veil_of_darkness_observations(stops_df, sunset_times):
+def get_veil_of_darkness_observations(stops_df, sunset_times, date_col = 'date'):
+    """
+    Gets all observations in stops_df that occur after sunset times, removing the observations in the 
+    ambiguious period between sunset and dusk. Based on the tutorial's definition.
+ 
+    INPUTS
+    =======
+    stops_df: A pandas DataFrame that contains stops observations.
+    sunset_times. A pandas DataFrame that contains sunset information for each unique date in stops_df.
+                  The function calc_sunset_times() makes such DataFrame.
+    date_col: A string indicating the date column on stops_df and sunset_times. Should be the same for both.
+          By default assumes it is 'date'. 
+    
+    RETURNS
+    ========
+    A subset of stops_df that contains all observations that occur after sunset time, merged with sunset_times.
+    """
     stops_df = stops_df.copy()
-    merged = stops_df.merge(sunset_times, on = 'date')
+    merged = stops_df.merge(sunset_times, on = date_col)
     times = merged['time'].apply(lambda time: datetime.datetime.strptime(time, '%H:%M:%S').time())
     merged['minute'] = times.apply(lambda time: time.hour * 60 + time.minute)
     merged['minutes_after_dark'] = merged['minute'] - merged['dusk_minute']
@@ -90,13 +212,30 @@ def get_veil_of_darkness_observations(stops_df, sunset_times):
     merged = merged[~((merged['minute'] > merged['sunset_minute']) &\
                         (merged['minute'] < merged['dusk_minute']))]
     return merged
-
-def calc_vod_rate_of_minority(vod_stops, start_time, end_time, minority_race):
+                
+def calc_vod_rate(vod_stops, start_time, end_time, group, group_col, time_col = 'time'):
+    """
+    Calculate the rate based on observations in stops between start time and end time based on Veil-of-Darkness
+    for a group.
+ 
+    INPUTS
+    =======
+    vod_stops: A DataFrame that came from the function get_veil_of_darkness_observations().
+    start_time: A string indicating the start time in the format "hh:mm".
+    end_time: A string indicating the end time in the format "hh:mm".
+    group: A string indicating the group. 
+    group_col: A string indicating the name of the group column.
+    time_col: A string indicating the name of the time column. By default assumed it is 'time'.
+    
+    RETURNS
+    ========
+    Calculate the Veil of Darkness rate based on observations in vod_stops between start time and end time
+    for a minority group compared to a majority group.     
+    """
     vod_stops = vod_stops.copy()
-    vod_stops = vod_stops[(vod_stops['time'] > start_time) & (vod_stops['time'] < end_time)]
-#     vod_stops = vod_stops[vod_stops['subject_race'].isin(['white', minority_race])]
-    vod_stops['is_{}'.format(minority_race)] = (vod_stops['subject_race'] == minority_race).astype(int)
-    groupby = vod_stops.groupby(['is_dark'])['is_{}'.format(minority_race)].mean()
+    vod_stops = vod_stops[(vod_stops[time_col] > start_time) & (vod_stops[time_col] < end_time)]
+    vod_stops['is_{}'.format(group)] = (vod_stops[group_col] == group).astype(int)
+    groupby = vod_stops.groupby(['is_dark'])['is_{}'.format(group)].mean()
     return groupby
 
 
