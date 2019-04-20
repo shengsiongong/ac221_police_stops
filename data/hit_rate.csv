@@ -1,0 +1,609 @@
+city,district,minority_group,minority_hit_rate,n,state,white_hit_rate
+New Orleans,1,asian/pacific islander,0.0,30,LA,0.24
+New Orleans,1,hispanic,0.05555555555555555,221,LA,0.24
+New Orleans,1,black,0.2849002849002849,2980,LA,0.24
+New Orleans,2,asian/pacific islander,0.0,43,LA,0.26495726495726496
+New Orleans,2,hispanic,0.2857142857142857,159,LA,0.26495726495726496
+New Orleans,2,black,0.35881104033970274,3130,LA,0.26495726495726496
+New Orleans,3,asian/pacific islander,0.0,54,LA,0.35384615384615387
+New Orleans,3,hispanic,0.1111111111111111,199,LA,0.35384615384615387
+New Orleans,3,black,0.35610766045548653,5913,LA,0.35384615384615387
+New Orleans,4,hispanic,0.25,93,LA,0.18181818181818182
+New Orleans,4,black,0.16279069767441862,2744,LA,0.18181818181818182
+New Orleans,4,asian/pacific islander,0.5,60,LA,0.18181818181818182
+New Orleans,5,black,0.2727272727272727,1754,LA,0.12903225806451613
+New Orleans,5,asian/pacific islander,0.0,9,LA,0.12903225806451613
+New Orleans,5,hispanic,0.4,65,LA,0.12903225806451613
+New Orleans,6,black,0.23380726698262244,5167,LA,0.13253012048192772
+New Orleans,6,asian/pacific islander,0.0,50,LA,0.13253012048192772
+New Orleans,6,hispanic,0.16666666666666666,245,LA,0.13253012048192772
+New Orleans,7,hispanic,0.3333333333333333,54,LA,0.14285714285714285
+New Orleans,7,black,0.2664576802507837,2740,LA,0.14285714285714285
+New Orleans,7,asian/pacific islander,0.0,36,LA,0.14285714285714285
+New Orleans,8,black,0.25806451612903225,1708,LA,0.19607843137254902
+New Orleans,8,asian/pacific islander,0.0,38,LA,0.19607843137254902
+New Orleans,8,hispanic,0.1111111111111111,111,LA,0.19607843137254902
+Philadelphia,11.0,asian/pacific islander,0.16666666666666666,431,PA,0.7142857142857143
+Philadelphia,11.0,black,0.1509433962264151,2765,PA,0.7142857142857143
+Philadelphia,11.0,hispanic,0.5,137,PA,0.7142857142857143
+Philadelphia,12.0,asian/pacific islander,0.0,37,PA,0.25
+Philadelphia,12.0,black,0.7142857142857143,216,PA,0.25
+Philadelphia,12.0,hispanic,0.0,7,PA,0.25
+Philadelphia,21.0,asian/pacific islander,0.25,290,PA,0.4838709677419355
+Philadelphia,21.0,black,0.43023255813953487,2869,PA,0.4838709677419355
+Philadelphia,21.0,hispanic,0.18,1393,PA,0.4838709677419355
+Philadelphia,22.0,asian/pacific islander,0.6666666666666666,119,PA,0.3333333333333333
+Philadelphia,22.0,black,0.2222222222222222,1349,PA,0.3333333333333333
+Philadelphia,22.0,hispanic,0.1875,342,PA,0.3333333333333333
+Philadelphia,23.0,black,0.3870967741935484,1016,PA,0.25806451612903225
+Philadelphia,23.0,hispanic,0.5333333333333333,421,PA,0.25806451612903225
+Philadelphia,23.0,asian/pacific islander,0.6666666666666666,158,PA,0.25806451612903225
+Philadelphia,31.0,hispanic,0.5555555555555556,214,PA,0.3
+Philadelphia,31.0,asian/pacific islander,0.3333333333333333,375,PA,0.3
+Philadelphia,31.0,black,0.24489795918367346,1776,PA,0.3
+Philadelphia,32.0,hispanic,0.3333333333333333,186,PA,0.41379310344827586
+Philadelphia,32.0,asian/pacific islander,0.2,344,PA,0.41379310344827586
+Philadelphia,32.0,black,0.25,843,PA,0.41379310344827586
+Philadelphia,33.0,hispanic,0.4166666666666667,199,PA,0.5
+Philadelphia,33.0,asian/pacific islander,0.5,477,PA,0.5
+Philadelphia,33.0,black,0.2549019607843137,938,PA,0.5
+Philadelphia,51.0,hispanic,0.0,59,PA,0.3333333333333333
+Philadelphia,51.0,black,0.0,414,PA,0.3333333333333333
+Philadelphia,51.0,asian/pacific islander,0.0,47,PA,0.3333333333333333
+Philadelphia,52.0,black,0.4,279,PA,0.1111111111111111
+Philadelphia,52.0,hispanic,0.0,33,PA,0.1111111111111111
+Philadelphia,52.0,asian/pacific islander,0.0,37,PA,0.1111111111111111
+Philadelphia,53.0,black,0.0,152,PA,0.0
+Philadelphia,53.0,hispanic,0.0,13,PA,0.0
+Philadelphia,53.0,asian/pacific islander,0.0,10,PA,0.0
+Philadelphia,61.0,black,0.3230769230769231,1535,PA,0.46153846153846156
+Philadelphia,61.0,hispanic,0.25,246,PA,0.46153846153846156
+Philadelphia,61.0,asian/pacific islander,0.3333333333333333,206,PA,0.46153846153846156
+Philadelphia,62.0,hispanic,0.75,96,PA,0.14285714285714285
+Philadelphia,62.0,asian/pacific islander,0.0,191,PA,0.14285714285714285
+Philadelphia,62.0,black,0.3,586,PA,0.14285714285714285
+Philadelphia,63.0,asian/pacific islander,0.0,66,PA,0.0
+Philadelphia,63.0,black,0.18181818181818182,414,PA,0.0
+Philadelphia,63.0,hispanic,0.0,31,PA,0.0
+Philadelphia,71.0,asian/pacific islander,0.0,71,PA,0.4
+Philadelphia,71.0,black,0.0,324,PA,0.4
+Philadelphia,71.0,hispanic,0.4,113,PA,0.4
+Philadelphia,72.0,asian/pacific islander,0.0,102,PA,0.2727272727272727
+Philadelphia,72.0,black,0.2727272727272727,400,PA,0.2727272727272727
+Philadelphia,72.0,hispanic,0.3333333333333333,98,PA,0.2727272727272727
+Philadelphia,73.0,black,0.0,176,PA,0.16666666666666666
+Philadelphia,73.0,hispanic,0.0,70,PA,0.16666666666666666
+Philadelphia,73.0,asian/pacific islander,0.0,88,PA,0.16666666666666666
+Philadelphia,81.0,hispanic,0.0,205,PA,0.16666666666666666
+Philadelphia,81.0,asian/pacific islander,0.0,59,PA,0.16666666666666666
+Philadelphia,81.0,black,0.2857142857142857,538,PA,0.16666666666666666
+Philadelphia,82.0,hispanic,0.3333333333333333,180,PA,0.14285714285714285
+Philadelphia,82.0,asian/pacific islander,0.0,55,PA,0.14285714285714285
+Philadelphia,82.0,black,0.3333333333333333,513,PA,0.14285714285714285
+Philadelphia,83.0,hispanic,0.25,122,PA,0.21739130434782608
+Philadelphia,83.0,asian/pacific islander,0.0,39,PA,0.21739130434782608
+Philadelphia,83.0,black,0.0,306,PA,0.21739130434782608
+Philadelphia,91.0,hispanic,0.0,69,PA,0.0
+Philadelphia,91.0,asian/pacific islander,0.0,79,PA,0.0
+Philadelphia,91.0,black,0.16666666666666666,741,PA,0.0
+Philadelphia,92.0,asian/pacific islander,0.6666666666666666,155,PA,0.6
+Philadelphia,92.0,black,0.2,1245,PA,0.6
+Philadelphia,92.0,hispanic,0.0,105,PA,0.6
+Philadelphia,93.0,black,0.15384615384615385,825,PA,0.0
+Philadelphia,93.0,hispanic,0.0,68,PA,0.0
+Philadelphia,93.0,asian/pacific islander,0.0,54,PA,0.0
+Philadelphia,121.0,black,0.31343283582089554,2653,PA,0.0
+Philadelphia,121.0,hispanic,0.0,62,PA,0.0
+Philadelphia,121.0,asian/pacific islander,1.0,69,PA,0.0
+Philadelphia,122.0,black,0.35714285714285715,3886,PA,0.6
+Philadelphia,122.0,hispanic,0.5,40,PA,0.6
+Philadelphia,122.0,asian/pacific islander,0.0,134,PA,0.6
+Philadelphia,123.0,black,0.2474747474747475,5536,PA,0.3333333333333333
+Philadelphia,123.0,asian/pacific islander,0.0,157,PA,0.3333333333333333
+Philadelphia,123.0,hispanic,1.0,68,PA,0.3333333333333333
+Philadelphia,124.0,asian/pacific islander,0.0,70,PA,0.6666666666666666
+Philadelphia,124.0,black,0.2623762376237624,6858,PA,0.6666666666666666
+Philadelphia,124.0,hispanic,0.3333333333333333,75,PA,0.6666666666666666
+Philadelphia,141.0,asian/pacific islander,0.0,91,PA,0.1875
+Philadelphia,141.0,black,0.11874469889737066,13665,PA,0.1875
+Philadelphia,141.0,hispanic,0.0,170,PA,0.1875
+Philadelphia,142.0,asian/pacific islander,0.5,57,PA,0.07692307692307693
+Philadelphia,142.0,black,0.18619436875567666,12034,PA,0.07692307692307693
+Philadelphia,142.0,hispanic,0.11764705882352941,190,PA,0.07692307692307693
+Philadelphia,143.0,asian/pacific islander,0.0,24,PA,0.3333333333333333
+Philadelphia,143.0,black,0.2072072072072072,1999,PA,0.3333333333333333
+Philadelphia,143.0,hispanic,0.0,38,PA,0.3333333333333333
+Philadelphia,144.0,hispanic,0.0,16,PA,0.3333333333333333
+Philadelphia,144.0,asian/pacific islander,0.0,13,PA,0.3333333333333333
+Philadelphia,144.0,black,0.175,918,PA,0.3333333333333333
+Philadelphia,151.0,black,0.27666666666666667,3842,PA,0.2463768115942029
+Philadelphia,151.0,asian/pacific islander,0.0,145,PA,0.2463768115942029
+Philadelphia,151.0,hispanic,0.2535211267605634,1364,PA,0.2463768115942029
+Philadelphia,152.0,hispanic,0.2631578947368421,426,PA,0.22916666666666666
+Philadelphia,152.0,black,0.22448979591836735,976,PA,0.22916666666666666
+Philadelphia,152.0,asian/pacific islander,0.0,56,PA,0.22916666666666666
+Philadelphia,153.0,black,0.2682926829268293,580,PA,0.2222222222222222
+Philadelphia,153.0,asian/pacific islander,0.0,42,PA,0.2222222222222222
+Philadelphia,153.0,hispanic,0.10526315789473684,245,PA,0.2222222222222222
+Philadelphia,161.0,hispanic,0.0,74,PA,0.6
+Philadelphia,161.0,black,0.17757009345794392,2611,PA,0.6
+Philadelphia,161.0,asian/pacific islander,0.0,72,PA,0.6
+Philadelphia,162.0,black,0.16129032258064516,4598,PA,1.0
+Philadelphia,162.0,asian/pacific islander,0.0,47,PA,1.0
+Philadelphia,162.0,hispanic,0.0,54,PA,1.0
+Philadelphia,171.0,black,0.18823529411764706,1452,PA,0.3076923076923077
+Philadelphia,171.0,asian/pacific islander,0.0,128,PA,0.3076923076923077
+Philadelphia,171.0,hispanic,0.08333333333333333,86,PA,0.3076923076923077
+Philadelphia,172.0,asian/pacific islander,0.0,209,PA,0.21875
+Philadelphia,172.0,black,0.18295739348370926,5020,PA,0.21875
+Philadelphia,172.0,hispanic,0.0,166,PA,0.21875
+Philadelphia,173.0,asian/pacific islander,0.0,120,PA,0.23076923076923078
+Philadelphia,173.0,hispanic,0.0,74,PA,0.23076923076923078
+Philadelphia,173.0,black,0.2111801242236025,2243,PA,0.23076923076923078
+Philadelphia,181.0,hispanic,0.0,74,PA,0.631578947368421
+Philadelphia,181.0,black,0.24924924924924924,7900,PA,0.631578947368421
+Philadelphia,181.0,asian/pacific islander,0.6666666666666666,118,PA,0.631578947368421
+Philadelphia,182.0,hispanic,0.0,83,PA,0.18181818181818182
+Philadelphia,182.0,asian/pacific islander,0.5,101,PA,0.18181818181818182
+Philadelphia,182.0,black,0.3142857142857143,7012,PA,0.18181818181818182
+Philadelphia,183.0,black,0.31645569620253167,2477,PA,0.3333333333333333
+Philadelphia,183.0,asian/pacific islander,0.0,138,PA,0.3333333333333333
+Philadelphia,183.0,hispanic,0.3333333333333333,37,PA,0.3333333333333333
+Philadelphia,191.0,asian/pacific islander,0.0,78,PA,0.2727272727272727
+Philadelphia,191.0,black,0.325,4938,PA,0.2727272727272727
+Philadelphia,191.0,hispanic,0.6,67,PA,0.2727272727272727
+Philadelphia,192.0,asian/pacific islander,0.6,113,PA,0.59375
+Philadelphia,192.0,hispanic,0.0,141,PA,0.59375
+Philadelphia,192.0,black,0.32105263157894737,13284,PA,0.59375
+Philadelphia,193.0,black,0.3888888888888889,2891,PA,0.2727272727272727
+Philadelphia,193.0,asian/pacific islander,0.0,44,PA,0.2727272727272727
+Philadelphia,193.0,hispanic,0.0,39,PA,0.2727272727272727
+Philadelphia,221.0,hispanic,0.05555555555555555,309,PA,0.45
+Philadelphia,221.0,asian/pacific islander,0.0,129,PA,0.45
+Philadelphia,221.0,black,0.15985790408525755,8254,PA,0.45
+Philadelphia,222.0,hispanic,0.0,172,PA,0.21428571428571427
+Philadelphia,222.0,asian/pacific islander,0.0,57,PA,0.21428571428571427
+Philadelphia,222.0,black,0.19899244332493704,6440,PA,0.21428571428571427
+Philadelphia,223.0,asian/pacific islander,0.25,101,PA,0.2857142857142857
+Philadelphia,223.0,black,0.2391304347826087,2187,PA,0.2857142857142857
+Philadelphia,223.0,hispanic,0.3333333333333333,106,PA,0.2857142857142857
+Philadelphia,224.0,asian/pacific islander,0.0,21,PA,1.0
+Philadelphia,224.0,hispanic,0.0,29,PA,1.0
+Philadelphia,224.0,black,0.35294117647058826,1491,PA,1.0
+Philadelphia,241.0,black,0.17222222222222222,2126,PA,0.24025974025974026
+Philadelphia,241.0,hispanic,0.21323529411764705,2430,PA,0.24025974025974026
+Philadelphia,241.0,asian/pacific islander,0.0,103,PA,0.24025974025974026
+Philadelphia,242.0,black,0.2185792349726776,3226,PA,0.3442622950819672
+Philadelphia,242.0,asian/pacific islander,0.6666666666666666,191,PA,0.3442622950819672
+Philadelphia,242.0,hispanic,0.2669902912621359,4753,PA,0.3442622950819672
+Philadelphia,243.0,asian/pacific islander,0.0,21,PA,0.2608695652173913
+Philadelphia,243.0,black,0.07142857142857142,275,PA,0.2608695652173913
+Philadelphia,243.0,hispanic,0.2916666666666667,341,PA,0.2608695652173913
+Philadelphia,251.0,hispanic,0.09375,2745,PA,0.3076923076923077
+Philadelphia,251.0,asian/pacific islander,0.0,92,PA,0.3076923076923077
+Philadelphia,251.0,black,0.19661016949152543,3688,PA,0.3076923076923077
+Philadelphia,252.0,asian/pacific islander,0.0,64,PA,0.23333333333333334
+Philadelphia,252.0,hispanic,0.2,1636,PA,0.23333333333333334
+Philadelphia,252.0,black,0.125,1473,PA,0.23333333333333334
+Philadelphia,253.0,asian/pacific islander,0.6,78,PA,0.2645161290322581
+Philadelphia,253.0,hispanic,0.21285140562248997,3811,PA,0.2645161290322581
+Philadelphia,253.0,black,0.21176470588235294,2064,PA,0.2645161290322581
+Philadelphia,254.0,hispanic,0.21818181818181817,1028,PA,0.3333333333333333
+Philadelphia,254.0,asian/pacific islander,0.0,46,PA,0.3333333333333333
+Philadelphia,254.0,black,0.23622047244094488,2076,PA,0.3333333333333333
+Philadelphia,261.0,asian/pacific islander,0.5,51,PA,0.10714285714285714
+Philadelphia,261.0,black,0.2153846153846154,1489,PA,0.10714285714285714
+Philadelphia,261.0,hispanic,0.11864406779661017,1540,PA,0.10714285714285714
+Philadelphia,262.0,asian/pacific islander,0.0,50,PA,0.2222222222222222
+Philadelphia,262.0,hispanic,0.125,395,PA,0.2222222222222222
+Philadelphia,262.0,black,0.3,640,PA,0.2222222222222222
+Philadelphia,263.0,hispanic,0.21428571428571427,501,PA,0.24324324324324326
+Philadelphia,263.0,asian/pacific islander,0.0,72,PA,0.24324324324324326
+Philadelphia,263.0,black,0.43478260869565216,662,PA,0.24324324324324326
+Philadelphia,351.0,hispanic,0.0,493,PA,0.21428571428571427
+Philadelphia,351.0,asian/pacific islander,0.058823529411764705,297,PA,0.21428571428571427
+Philadelphia,351.0,black,0.1728395061728395,5454,PA,0.21428571428571427
+Philadelphia,352.0,black,0.20600272851296045,8783,PA,0.3235294117647059
+Philadelphia,352.0,hispanic,0.1935483870967742,879,PA,0.3235294117647059
+Philadelphia,352.0,asian/pacific islander,0.3181818181818182,284,PA,0.3235294117647059
+Philadelphia,353.0,black,0.1831357048748353,7658,PA,0.0
+Philadelphia,353.0,hispanic,0.3,172,PA,0.0
+Philadelphia,353.0,asian/pacific islander,0.0,53,PA,0.0
+Philadelphia,391.0,hispanic,0.0,151,PA,0.375
+Philadelphia,391.0,asian/pacific islander,0.0,75,PA,0.375
+Philadelphia,391.0,black,0.25225225225225223,4539,PA,0.375
+Philadelphia,392.0,black,0.26865671641791045,6457,PA,0.625
+Philadelphia,392.0,hispanic,0.0,236,PA,0.625
+Philadelphia,392.0,asian/pacific islander,0.0,61,PA,0.625
+Philadelphia,393.0,hispanic,0.2222222222222222,224,PA,0.5333333333333333
+Philadelphia,393.0,asian/pacific islander,1.0,71,PA,0.5333333333333333
+Philadelphia,393.0,black,0.29285714285714287,7548,PA,0.5333333333333333
+Philadelphia,7700.0,black,0.0,295,PA,0.0
+Philadelphia,7700.0,asian/pacific islander,0.0,71,PA,0.0
+Philadelphia,7700.0,hispanic,0.0,52,PA,0.0
+San Antonio,2110.0,asian/pacific islander,0.0,38,TX,0.4
+San Antonio,2110.0,hispanic,0.4,909,TX,0.4
+San Antonio,2110.0,black,0.0,262,TX,0.4
+San Antonio,2120.0,asian/pacific islander,0.0,10,TX,0.2727272727272727
+San Antonio,2120.0,hispanic,0.0,1136,TX,0.2727272727272727
+San Antonio,2120.0,black,0.0,195,TX,0.2727272727272727
+San Antonio,2130.0,asian/pacific islander,0.0,1,TX,0.0
+San Antonio,2130.0,hispanic,0.0,147,TX,0.0
+San Antonio,2130.0,black,0.0,62,TX,0.0
+San Antonio,2140.0,asian/pacific islander,0.0,2,TX,0.2
+San Antonio,2140.0,hispanic,0.0,247,TX,0.2
+San Antonio,2140.0,black,0.0,40,TX,0.2
+San Antonio,2150.0,hispanic,0.16666666666666666,930,TX,0.0
+San Antonio,2150.0,black,0.0,77,TX,0.0
+San Antonio,2150.0,asian/pacific islander,0.0,5,TX,0.0
+San Antonio,2160.0,black,0.0,66,TX,0.42857142857142855
+San Antonio,2160.0,asian/pacific islander,0.0,5,TX,0.42857142857142855
+San Antonio,2160.0,hispanic,0.0,557,TX,0.42857142857142855
+San Antonio,2210.0,black,0.0,43,TX,0.0
+San Antonio,2210.0,asian/pacific islander,0.0,1,TX,0.0
+San Antonio,2210.0,hispanic,0.42857142857142855,339,TX,0.0
+San Antonio,2220.0,black,0.0,52,TX,0.0
+San Antonio,2220.0,hispanic,0.0,395,TX,0.0
+San Antonio,2220.0,asian/pacific islander,0.0,8,TX,0.0
+San Antonio,2230.0,hispanic,0.0,301,TX,0.0
+San Antonio,2230.0,black,0.0,47,TX,0.0
+San Antonio,2230.0,asian/pacific islander,0.0,6,TX,0.0
+San Antonio,2240.0,hispanic,0.0,584,TX,0.0
+San Antonio,2240.0,black,0.0,33,TX,0.0
+San Antonio,2250.0,hispanic,0.0,368,TX,0.0
+San Antonio,2250.0,black,0.0,33,TX,0.0
+San Antonio,2250.0,asian/pacific islander,0.0,2,TX,0.0
+San Antonio,2260.0,black,0.0,115,TX,0.0
+San Antonio,2260.0,asian/pacific islander,0.0,21,TX,0.0
+San Antonio,2260.0,hispanic,0.0,496,TX,0.0
+San Antonio,2310.0,asian/pacific islander,0.0,1,TX,0.0
+San Antonio,2310.0,hispanic,0.0,440,TX,0.0
+San Antonio,2310.0,black,0.0,52,TX,0.0
+San Antonio,2320.0,asian/pacific islander,0.0,1,TX,0.21428571428571427
+San Antonio,2320.0,hispanic,0.0,774,TX,0.21428571428571427
+San Antonio,2320.0,black,0.0,59,TX,0.21428571428571427
+San Antonio,2330.0,hispanic,0.0,999,TX,0.043478260869565216
+San Antonio,2330.0,black,0.0,138,TX,0.043478260869565216
+San Antonio,2330.0,asian/pacific islander,0.0,4,TX,0.043478260869565216
+San Antonio,2340.0,black,0.0,64,TX,0.125
+San Antonio,2340.0,asian/pacific islander,0.0,4,TX,0.125
+San Antonio,2340.0,hispanic,0.0,1125,TX,0.125
+San Antonio,2350.0,black,0.0,22,TX,0.0
+San Antonio,2350.0,hispanic,0.11538461538461539,679,TX,0.0
+San Antonio,2360.0,black,0.0,88,TX,0.05
+San Antonio,2360.0,hispanic,0.0,1124,TX,0.05
+San Antonio,3110.0,hispanic,0.0,128,TX,0.0
+San Antonio,3110.0,black,0.0,33,TX,0.0
+San Antonio,3120.0,hispanic,0.0,427,TX,0.0
+San Antonio,3120.0,black,0.0,72,TX,0.0
+San Antonio,3120.0,asian/pacific islander,0.0,4,TX,0.0
+San Antonio,3130.0,hispanic,1.0,273,TX,0.0
+San Antonio,3130.0,black,0.0,45,TX,0.0
+San Antonio,3130.0,asian/pacific islander,0.0,9,TX,0.0
+San Antonio,3140.0,hispanic,0.0,357,TX,0.0
+San Antonio,3140.0,asian/pacific islander,0.0,6,TX,0.0
+San Antonio,3140.0,black,0.0,71,TX,0.0
+San Antonio,3150.0,asian/pacific islander,0.0,41,TX,0.0
+San Antonio,3150.0,hispanic,0.0,708,TX,0.0
+San Antonio,3150.0,black,0.0,197,TX,0.0
+San Antonio,3160.0,asian/pacific islander,0.0,4,TX,0.0
+San Antonio,3160.0,hispanic,0.0,193,TX,0.0
+San Antonio,3160.0,black,0.0,44,TX,0.0
+San Antonio,3170.0,asian/pacific islander,0.0,19,TX,0.0
+San Antonio,3170.0,hispanic,0.0,208,TX,0.0
+San Antonio,3170.0,black,0.0,42,TX,0.0
+San Antonio,3210.0,hispanic,0.0,272,TX,0.42857142857142855
+San Antonio,3210.0,black,0.0,108,TX,0.42857142857142855
+San Antonio,3210.0,asian/pacific islander,0.0,6,TX,0.42857142857142855
+San Antonio,3220.0,black,0.0,35,TX,0.0
+San Antonio,3220.0,asian/pacific islander,0.0,5,TX,0.0
+San Antonio,3220.0,hispanic,0.25,116,TX,0.0
+San Antonio,3230.0,black,0.0,105,TX,0.14285714285714285
+San Antonio,3230.0,asian/pacific islander,0.0,4,TX,0.14285714285714285
+San Antonio,3230.0,hispanic,0.0,268,TX,0.14285714285714285
+San Antonio,3240.0,black,0.0,62,TX,0.3
+San Antonio,3240.0,hispanic,0.0,202,TX,0.3
+San Antonio,3240.0,asian/pacific islander,0.0,5,TX,0.3
+San Antonio,3250.0,hispanic,0.0,270,TX,0.14285714285714285
+San Antonio,3250.0,black,0.0,121,TX,0.14285714285714285
+San Antonio,3250.0,asian/pacific islander,0.0,8,TX,0.14285714285714285
+San Antonio,3260.0,hispanic,0.0,467,TX,0.125
+San Antonio,3260.0,black,0.0,121,TX,0.125
+San Antonio,3260.0,asian/pacific islander,0.0,26,TX,0.125
+San Antonio,3310.0,hispanic,0.2,891,TX,0.0
+San Antonio,3310.0,black,0.0,104,TX,0.0
+San Antonio,3310.0,asian/pacific islander,0.0,9,TX,0.0
+San Antonio,3320.0,black,0.8333333333333334,798,TX,0.5
+San Antonio,3320.0,asian/pacific islander,0.0,84,TX,0.5
+San Antonio,3320.0,hispanic,0.0,2513,TX,0.5
+San Antonio,3330.0,asian/pacific islander,0.0,43,TX,0.2
+San Antonio,3330.0,hispanic,1.0,967,TX,0.2
+San Antonio,3330.0,black,0.0,399,TX,0.2
+San Antonio,3340.0,asian/pacific islander,0.0,16,TX,0.0
+San Antonio,3340.0,hispanic,0.0,209,TX,0.0
+San Antonio,3340.0,black,0.0,114,TX,0.0
+San Antonio,3350.0,asian/pacific islander,0.0,9,TX,0.0
+San Antonio,3350.0,hispanic,0.0,308,TX,0.0
+San Antonio,3350.0,black,0.09090909090909091,100,TX,0.0
+San Antonio,3360.0,asian/pacific islander,0.0,17,TX,0.0
+San Antonio,3360.0,black,0.0,123,TX,0.0
+San Antonio,3360.0,hispanic,0.0,525,TX,0.0
+San Antonio,3370.0,black,0.0,53,TX,0.375
+San Antonio,3370.0,asian/pacific islander,0.0,1,TX,0.375
+San Antonio,3370.0,hispanic,0.0,83,TX,0.375
+San Antonio,4110.0,black,0.0,162,TX,0.0
+San Antonio,4110.0,asian/pacific islander,0.0,1,TX,0.0
+San Antonio,4110.0,hispanic,0.0,470,TX,0.0
+San Antonio,4120.0,hispanic,0.0,2106,TX,0.0
+San Antonio,4120.0,asian/pacific islander,0.0,17,TX,0.0
+San Antonio,4120.0,black,0.0,288,TX,0.0
+San Antonio,4130.0,asian/pacific islander,0.0,17,TX,0.0
+San Antonio,4130.0,black,0.29411764705882354,221,TX,0.0
+San Antonio,4130.0,hispanic,0.0,426,TX,0.0
+San Antonio,4140.0,black,0.0,160,TX,0.0
+San Antonio,4140.0,asian/pacific islander,0.0,1,TX,0.0
+San Antonio,4140.0,hispanic,0.13333333333333333,320,TX,0.0
+San Antonio,4150.0,hispanic,1.0,844,TX,0.0
+San Antonio,4150.0,black,0.0,96,TX,0.0
+San Antonio,4150.0,asian/pacific islander,0.0,3,TX,0.0
+San Antonio,4160.0,black,0.0,360,TX,0.0
+San Antonio,4160.0,asian/pacific islander,0.0,20,TX,0.0
+San Antonio,4160.0,hispanic,0.0,1167,TX,0.0
+San Antonio,4210.0,hispanic,0.45454545454545453,367,TX,0.0
+San Antonio,4210.0,black,1.0,119,TX,0.0
+San Antonio,4220.0,hispanic,0.0,285,TX,0.0
+San Antonio,4220.0,black,0.25,49,TX,0.0
+San Antonio,4230.0,asian/pacific islander,0.0,1,TX,0.0
+San Antonio,4230.0,hispanic,0.0,184,TX,0.0
+San Antonio,4230.0,black,0.21428571428571427,156,TX,0.0
+San Antonio,4240.0,hispanic,0.0,887,TX,0.0
+San Antonio,4240.0,black,0.16666666666666666,271,TX,0.0
+San Antonio,4240.0,asian/pacific islander,0.0,19,TX,0.0
+San Antonio,4250.0,black,0.0,78,TX,0.0
+San Antonio,4250.0,asian/pacific islander,0.0,1,TX,0.0
+San Antonio,4250.0,hispanic,0.0,137,TX,0.0
+San Antonio,4260.0,black,0.0,73,TX,0.0
+San Antonio,4260.0,asian/pacific islander,0.0,2,TX,0.0
+San Antonio,4260.0,hispanic,0.2,393,TX,0.0
+San Antonio,4310.0,black,0.0,647,TX,0.23076923076923078
+San Antonio,4310.0,hispanic,0.0,2136,TX,0.23076923076923078
+San Antonio,4310.0,asian/pacific islander,0.0,53,TX,0.23076923076923078
+San Antonio,4320.0,hispanic,0.0,36,TX,0.0
+San Antonio,4320.0,asian/pacific islander,0.0,1,TX,0.0
+San Antonio,4320.0,black,0.0,23,TX,0.0
+San Antonio,4330.0,hispanic,0.0,385,TX,0.0
+San Antonio,4330.0,asian/pacific islander,0.0,9,TX,0.0
+San Antonio,4330.0,black,0.0,195,TX,0.0
+San Antonio,4340.0,hispanic,0.0,304,TX,0.0
+San Antonio,4340.0,asian/pacific islander,0.0,9,TX,0.0
+San Antonio,4340.0,black,0.0,107,TX,0.0
+San Antonio,4350.0,black,0.0,339,TX,0.0
+San Antonio,4350.0,hispanic,0.3333333333333333,574,TX,0.0
+San Antonio,4350.0,asian/pacific islander,0.0,42,TX,0.0
+San Antonio,4360.0,hispanic,0.0,377,TX,1.0
+San Antonio,4360.0,black,0.3,192,TX,1.0
+San Antonio,4360.0,asian/pacific islander,0.0,9,TX,1.0
+San Antonio,5110.0,black,0.0,20,TX,0.0
+San Antonio,5110.0,hispanic,0.0,331,TX,0.0
+San Antonio,5110.0,asian/pacific islander,0.0,1,TX,0.0
+San Antonio,5120.0,hispanic,0.0,1097,TX,0.0
+San Antonio,5120.0,asian/pacific islander,0.0,14,TX,0.0
+San Antonio,5120.0,black,0.0,156,TX,0.0
+San Antonio,5130.0,black,0.0,12,TX,0.0
+San Antonio,5130.0,hispanic,0.6,365,TX,0.0
+San Antonio,5140.0,hispanic,0.1,1597,TX,0.0
+San Antonio,5140.0,asian/pacific islander,0.0,9,TX,0.0
+San Antonio,5140.0,black,1.0,132,TX,0.0
+San Antonio,5150.0,hispanic,0.0,2560,TX,0.0
+San Antonio,5150.0,asian/pacific islander,0.0,34,TX,0.0
+San Antonio,5150.0,black,0.0,531,TX,0.0
+San Antonio,5160.0,black,0.0,92,TX,0.0
+San Antonio,5160.0,asian/pacific islander,0.0,4,TX,0.0
+San Antonio,5160.0,hispanic,0.26666666666666666,497,TX,0.0
+San Antonio,5170.0,asian/pacific islander,0.0,5,TX,0.0
+San Antonio,5170.0,black,0.0,60,TX,0.0
+San Antonio,5170.0,hispanic,0.0,443,TX,0.0
+San Antonio,5210.0,hispanic,0.0,468,TX,0.0
+San Antonio,5210.0,black,0.0,29,TX,0.0
+San Antonio,5220.0,hispanic,0.0,1436,TX,0.0
+San Antonio,5220.0,black,0.0,100,TX,0.0
+San Antonio,5220.0,asian/pacific islander,0.0,13,TX,0.0
+San Antonio,5240.0,hispanic,0.0,443,TX,0.0
+San Antonio,5240.0,black,0.0,58,TX,0.0
+San Antonio,5240.0,asian/pacific islander,0.0,4,TX,0.0
+San Antonio,5250.0,hispanic,0.0,501,TX,0.0
+San Antonio,5250.0,asian/pacific islander,0.0,2,TX,0.0
+San Antonio,5250.0,black,0.0,18,TX,0.0
+San Antonio,5260.0,black,0.0,335,TX,0.0
+San Antonio,5260.0,hispanic,0.0,1279,TX,0.0
+San Antonio,5260.0,asian/pacific islander,0.0,40,TX,0.0
+San Antonio,5270.0,asian/pacific islander,0.0,18,TX,0.0
+San Antonio,5270.0,black,0.0,133,TX,0.0
+San Antonio,5270.0,hispanic,0.0,710,TX,0.0
+San Antonio,5310.0,black,0.0,22,TX,0.0
+San Antonio,5310.0,hispanic,0.0,104,TX,0.0
+San Antonio,5320.0,asian/pacific islander,0.0,5,TX,0.0
+San Antonio,5320.0,black,0.0,72,TX,0.0
+San Antonio,5320.0,hispanic,0.10526315789473684,374,TX,0.0
+San Antonio,5330.0,black,0.0,48,TX,0.0
+San Antonio,5330.0,hispanic,0.0,329,TX,0.0
+San Antonio,5330.0,asian/pacific islander,0.0,4,TX,0.0
+San Antonio,5340.0,black,0.0,83,TX,0.2857142857142857
+San Antonio,5340.0,asian/pacific islander,0.0,8,TX,0.2857142857142857
+San Antonio,5340.0,hispanic,0.0,599,TX,0.2857142857142857
+San Antonio,5350.0,hispanic,0.0,1059,TX,0.3333333333333333
+San Antonio,5350.0,black,0.0,217,TX,0.3333333333333333
+San Antonio,5350.0,asian/pacific islander,0.0,24,TX,0.3333333333333333
+San Antonio,5360.0,hispanic,0.0,592,TX,1.0
+San Antonio,5360.0,asian/pacific islander,0.0,9,TX,1.0
+San Antonio,5360.0,black,0.0,96,TX,1.0
+San Antonio,6110.0,hispanic,0.0,890,TX,0.0
+San Antonio,6110.0,black,0.5,31,TX,0.0
+San Antonio,6110.0,asian/pacific islander,0.0,5,TX,0.0
+San Antonio,6120.0,asian/pacific islander,0.0,13,TX,0.0
+San Antonio,6120.0,hispanic,0.2727272727272727,2138,TX,0.0
+San Antonio,6120.0,black,0.5,204,TX,0.0
+San Antonio,6130.0,hispanic,0.15,802,TX,0.2222222222222222
+San Antonio,6130.0,asian/pacific islander,0.0,5,TX,0.2222222222222222
+San Antonio,6130.0,black,0.0,28,TX,0.2222222222222222
+San Antonio,6140.0,hispanic,0.2727272727272727,1432,TX,0.07142857142857142
+San Antonio,6140.0,black,0.0,134,TX,0.07142857142857142
+San Antonio,6140.0,asian/pacific islander,0.0,17,TX,0.07142857142857142
+San Antonio,6150.0,black,0.0,482,TX,0.0
+San Antonio,6150.0,asian/pacific islander,0.0,41,TX,0.0
+San Antonio,6150.0,hispanic,1.0,5162,TX,0.0
+San Antonio,6160.0,hispanic,0.0,490,TX,0.0
+San Antonio,6160.0,black,0.0,26,TX,0.0
+San Antonio,6160.0,asian/pacific islander,0.0,2,TX,0.0
+San Antonio,6210.0,asian/pacific islander,0.0,23,TX,0.0
+San Antonio,6210.0,hispanic,0.2222222222222222,2531,TX,0.0
+San Antonio,6210.0,black,0.0,333,TX,0.0
+San Antonio,6220.0,asian/pacific islander,0.0,3,TX,0.2631578947368421
+San Antonio,6220.0,black,0.0,71,TX,0.2631578947368421
+San Antonio,6220.0,hispanic,0.41935483870967744,1259,TX,0.2631578947368421
+San Antonio,6230.0,hispanic,0.0,1608,TX,0.0
+San Antonio,6230.0,black,0.0,191,TX,0.0
+San Antonio,6230.0,asian/pacific islander,0.0,22,TX,0.0
+San Antonio,6240.0,black,0.0,145,TX,0.0
+San Antonio,6240.0,asian/pacific islander,0.0,5,TX,0.0
+San Antonio,6240.0,hispanic,0.0,1403,TX,0.0
+San Antonio,6250.0,asian/pacific islander,0.0,3,TX,0.7142857142857143
+San Antonio,6250.0,black,0.0,47,TX,0.7142857142857143
+San Antonio,6250.0,hispanic,0.0,621,TX,0.7142857142857143
+San Antonio,6260.0,hispanic,0.23076923076923078,934,TX,0.4166666666666667
+San Antonio,6260.0,asian/pacific islander,0.0,25,TX,0.4166666666666667
+San Antonio,6260.0,black,0.0,188,TX,0.4166666666666667
+San Antonio,6270.0,hispanic,0.0,427,TX,0.0
+San Antonio,6270.0,asian/pacific islander,0.0,1,TX,0.0
+San Antonio,6270.0,black,0.0,43,TX,0.0
+San Antonio,6310.0,asian/pacific islander,0.0,5,TX,0.0
+San Antonio,6310.0,hispanic,0.0,1207,TX,0.0
+San Antonio,6310.0,black,0.0,68,TX,0.0
+San Antonio,6320.0,asian/pacific islander,0.0,4,TX,0.0
+San Antonio,6320.0,hispanic,0.18181818181818182,1034,TX,0.0
+San Antonio,6320.0,black,0.0,42,TX,0.0
+San Antonio,6330.0,asian/pacific islander,0.0,10,TX,0.1875
+San Antonio,6330.0,hispanic,0.05,863,TX,0.1875
+San Antonio,6330.0,black,0.0,109,TX,0.1875
+San Antonio,6340.0,hispanic,0.4117647058823529,313,TX,0.0
+San Antonio,6340.0,black,0.0,13,TX,0.0
+San Antonio,6340.0,asian/pacific islander,0.0,1,TX,0.0
+San Antonio,6350.0,black,0.0,22,TX,0.45454545454545453
+San Antonio,6350.0,asian/pacific islander,0.0,1,TX,0.45454545454545453
+San Antonio,6350.0,hispanic,0.0,292,TX,0.45454545454545453
+San Antonio,6360.0,black,0.0,272,TX,0.2
+San Antonio,6360.0,asian/pacific islander,0.0,35,TX,0.2
+San Antonio,6360.0,hispanic,0.7368421052631579,1553,TX,0.2
+San Antonio,7110.0,black,0.0,47,TX,0.0
+San Antonio,7110.0,asian/pacific islander,0.0,5,TX,0.0
+San Antonio,7110.0,hispanic,0.2222222222222222,196,TX,0.0
+San Antonio,7120.0,black,0.16666666666666666,92,TX,0.0
+San Antonio,7120.0,asian/pacific islander,0.0,13,TX,0.0
+San Antonio,7120.0,hispanic,0.2727272727272727,318,TX,0.0
+San Antonio,7130.0,black,0.0,37,TX,0.5714285714285714
+San Antonio,7130.0,hispanic,0.0,67,TX,0.5714285714285714
+San Antonio,7130.0,asian/pacific islander,0.0,6,TX,0.5714285714285714
+San Antonio,7140.0,black,0.0,77,TX,0.5
+San Antonio,7140.0,hispanic,0.0,346,TX,0.5
+San Antonio,7140.0,asian/pacific islander,0.0,7,TX,0.5
+San Antonio,7150.0,hispanic,0.0,184,TX,0.14285714285714285
+San Antonio,7150.0,black,0.16666666666666666,53,TX,0.14285714285714285
+San Antonio,7150.0,asian/pacific islander,0.0,7,TX,0.14285714285714285
+San Antonio,7160.0,hispanic,0.0,146,TX,0.0
+San Antonio,7160.0,black,0.2,57,TX,0.0
+San Antonio,7160.0,asian/pacific islander,0.0,3,TX,0.0
+San Antonio,7210.0,hispanic,0.0,309,TX,0.0
+San Antonio,7210.0,black,0.0,79,TX,0.0
+San Antonio,7210.0,asian/pacific islander,0.0,5,TX,0.0
+San Antonio,7230.0,hispanic,0.09090909090909091,257,TX,0.0
+San Antonio,7230.0,black,0.0,60,TX,0.0
+San Antonio,7230.0,asian/pacific islander,0.0,21,TX,0.0
+San Antonio,7240.0,hispanic,0.0,445,TX,0.0
+San Antonio,7240.0,asian/pacific islander,0.0,20,TX,0.0
+San Antonio,7240.0,black,0.0,85,TX,0.0
+San Antonio,7250.0,asian/pacific islander,0.0,20,TX,0.0
+San Antonio,7250.0,hispanic,0.0,399,TX,0.0
+San Antonio,7250.0,black,1.0,152,TX,0.0
+San Antonio,7260.0,hispanic,0.0,2297,TX,0.6666666666666666
+San Antonio,7260.0,black,0.0,580,TX,0.6666666666666666
+San Antonio,7260.0,asian/pacific islander,0.0,105,TX,0.6666666666666666
+San Antonio,7310.0,asian/pacific islander,0.0,12,TX,0.0
+San Antonio,7310.0,hispanic,0.0,87,TX,0.0
+San Antonio,7310.0,black,0.0,24,TX,0.0
+San Antonio,7320.0,hispanic,0.0,278,TX,0.0
+San Antonio,7320.0,asian/pacific islander,0.0,11,TX,0.0
+San Antonio,7320.0,black,0.0,39,TX,0.0
+San Antonio,7330.0,asian/pacific islander,0.0,11,TX,0.5
+San Antonio,7330.0,black,0.0,40,TX,0.5
+San Antonio,7330.0,hispanic,0.0,270,TX,0.5
+San Antonio,7340.0,black,0.375,809,TX,0.047619047619047616
+San Antonio,7340.0,hispanic,0.17647058823529413,4092,TX,0.047619047619047616
+San Antonio,7340.0,asian/pacific islander,0.0,115,TX,0.047619047619047616
+San Antonio,7350.0,black,0.0,32,TX,0.0
+San Antonio,7350.0,hispanic,1.0,211,TX,0.0
+San Antonio,7350.0,asian/pacific islander,0.0,19,TX,0.0
+San Antonio,7360.0,hispanic,0.0,475,TX,0.0
+San Antonio,7360.0,asian/pacific islander,0.0,16,TX,0.0
+San Antonio,7360.0,black,0.0,80,TX,0.0
+San Antonio,7370.0,black,0.0,14,TX,0.0
+San Antonio,7370.0,asian/pacific islander,0.0,4,TX,0.0
+San Antonio,7370.0,hispanic,1.0,78,TX,0.0
+San Diego,110,asian/pacific islander,1.0,176,CA,0.15151515151515152
+San Diego,110,black,0.14285714285714285,119,CA,0.15151515151515152
+San Diego,110,hispanic,0.1111111111111111,361,CA,0.15151515151515152
+San Diego,120,asian/pacific islander,0.0,90,CA,0.03125
+San Diego,120,black,0.25,106,CA,0.03125
+San Diego,120,hispanic,0.2222222222222222,283,CA,0.03125
+San Diego,130,black,0.0,1,CA,0.0
+San Diego,130,hispanic,0.0,2,CA,0.0
+San Diego,230,asian/pacific islander,0.0,156,CA,0.125
+San Diego,230,black,0.0,66,CA,0.125
+San Diego,230,hispanic,0.0,140,CA,0.125
+San Diego,240,asian/pacific islander,0.25,255,CA,0.42857142857142855
+San Diego,240,black,0.0,88,CA,0.42857142857142855
+San Diego,240,hispanic,0.16666666666666666,197,CA,0.42857142857142855
+San Diego,310,black,0.16666666666666666,256,CA,0.0
+San Diego,310,hispanic,0.0,487,CA,0.0
+San Diego,310,asian/pacific islander,0.0,356,CA,0.0
+San Diego,320,hispanic,0.0,349,CA,0.15384615384615385
+San Diego,320,asian/pacific islander,0.0,95,CA,0.15384615384615385
+San Diego,320,black,0.0,218,CA,0.15384615384615385
+San Diego,430,hispanic,0.25806451612903225,528,CA,0.2222222222222222
+San Diego,430,asian/pacific islander,0.5,141,CA,0.2222222222222222
+San Diego,430,black,0.42857142857142855,490,CA,0.2222222222222222
+San Diego,440,black,0.1935483870967742,364,CA,0.3333333333333333
+San Diego,440,hispanic,0.1891891891891892,570,CA,0.3333333333333333
+San Diego,440,asian/pacific islander,0.0,50,CA,0.3333333333333333
+San Diego,510,hispanic,0.2,846,CA,0.2
+San Diego,510,black,0.0,211,CA,0.2
+San Diego,510,asian/pacific islander,1.0,25,CA,0.2
+San Diego,520,black,0.15384615384615385,249,CA,0.0392156862745098
+San Diego,520,hispanic,0.25,401,CA,0.0392156862745098
+San Diego,520,asian/pacific islander,0.0,71,CA,0.0392156862745098
+San Diego,610,black,0.5,101,CA,0.0
+San Diego,610,hispanic,0.0,218,CA,0.0
+San Diego,610,asian/pacific islander,0.0,35,CA,0.0
+San Diego,620,black,0.0,109,CA,0.0
+San Diego,620,asian/pacific islander,0.0,76,CA,0.0
+San Diego,620,hispanic,0.14285714285714285,280,CA,0.0
+San Diego,710,hispanic,0.0,1688,CA,0.3333333333333333
+San Diego,710,black,0.0,58,CA,0.3333333333333333
+San Diego,710,asian/pacific islander,0.0,42,CA,0.3333333333333333
+San Diego,720,hispanic,0.03225806451612903,1055,CA,0.0
+San Diego,720,asian/pacific islander,0.0,57,CA,0.0
+San Diego,720,black,0.0,86,CA,0.0
+San Diego,810,hispanic,0.0,292,CA,0.3333333333333333
+San Diego,810,black,0.0,114,CA,0.3333333333333333
+San Diego,810,asian/pacific islander,0.0,36,CA,0.3333333333333333
+San Diego,820,asian/pacific islander,0.3333333333333333,77,CA,0.25
+San Diego,820,hispanic,0.06666666666666667,248,CA,0.25
+San Diego,820,black,0.20833333333333334,272,CA,0.25
+San Diego,830,hispanic,0.16216216216216217,386,CA,0.07142857142857142
+San Diego,830,black,0.17647058823529413,186,CA,0.07142857142857142
+San Diego,830,asian/pacific islander,0.16666666666666666,50,CA,0.07142857142857142
+San Diego,930,hispanic,0.0,327,CA,0.2
+San Diego,930,asian/pacific islander,0.0,276,CA,0.2
+San Diego,930,black,0.3333333333333333,87,CA,0.2
+San Diego,Unknown,black,0.0,96,CA,0.0
+San Diego,Unknown,asian/pacific islander,0.0,61,CA,0.0
+San Diego,Unknown,hispanic,0.09090909090909091,371,CA,0.0
