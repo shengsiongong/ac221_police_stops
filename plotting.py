@@ -36,7 +36,7 @@ def plot_rates_comparison(rate_name, hit_rates_comparison, majority_group, minor
         "minority_" + rate_name,
         edgecolors = 'black',
         facecolors = 'none',
-        s = (hit_rates_comparison[marker_size_col].astype(int)*marker_size_scale)**2) # test, attenuates differences
+        s = hit_rates_comparison[marker_size_col].astype(int)/marker_size_scale) # test, attenuates differences
         .set_titles("{col_name}")
         .set(xlim=(min_lim,max_lim) , ylim=(min_lim,max_lim)))
 
