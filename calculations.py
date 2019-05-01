@@ -283,7 +283,7 @@ def get_veil_of_darkness_observations(stops_df, sunset_times, date_col = 'date',
     A subset of stops_df that contains all observations that occur after sunset time, merged with sunset_times.
     """
     stops_df = stops_df.copy()
-    merged = stops_df.merge(sunset_times, on = date_col)
+    merged = stops_df.merge(sunset_times, how='left', on = date_col)
     #Convert to datetime if needed.
     try:
         times = merged[time_col].apply(lambda time: datetime.datetime.strptime(time, '%H:%M:%S').time())
@@ -295,13 +295,13 @@ def get_veil_of_darkness_observations(stops_df, sunset_times, date_col = 'date',
     min_dusk_minute = merged['dusk_minute'].min()
     max_dusk_minute = merged['dusk_minute'].max()
     # Filter to get only the intertwilight period
-    merged = merged[(merged['minute'] > min_dusk_minute) & (merged['minute'] < max_dusk_minute)]
+    merged = merged[(merged['minute'] >= min_dusk_minute) & (merged['minute'] <= max_dusk_minute)]
     # Remove ambigous period between sunset and dusk
     merged = merged[~((merged['minute'] > merged['sunset_minute']) &\
                         (merged['minute'] < merged['dusk_minute']))]
     return merged
 
-def calc_vod_rate(vod_stops, start_time, end_time, group, group_col, time_col = 'time'):
+def calc_vod_rate(vod_stops, start_time, end_time, group_col = 'subject_race', time_col = 'time'):
     """
     Calculate the rate based on observations in stops between start time and end time based on Veil-of-Darkness
     for a group.
@@ -311,8 +311,7 @@ def calc_vod_rate(vod_stops, start_time, end_time, group, group_col, time_col = 
     vod_stops: A DataFrame that came from the function get_veil_of_darkness_observations().
     start_time: A string indicating the start time in the format "hh:mm".
     end_time: A string indicating the end time in the format "hh:mm".
-    group: A string indicating the group.
-    group_col: A string indicating the name of the group column.
+    group_col: A string indicating the name of the group column. By default assume it is 'subject_race'
     time_col: A string indicating the name of the time column. By default assumes it is 'time'.
 
     RETURNS
@@ -321,8 +320,23 @@ def calc_vod_rate(vod_stops, start_time, end_time, group, group_col, time_col = 
     for a minority group compared to a majority group.
     """
     vod_stops = vod_stops.copy()
-    vod_stops[time_col] = vod_stops[time_col].astype(str)
-    vod_stops = vod_stops[(vod_stops[time_col] > start_time) & (vod_stops[time_col] < end_time)]
-    vod_stops['is_{}'.format(group)] = (vod_stops[group_col] == group).astype(int)
-    groupby = vod_stops.groupby(['is_dark'])['is_{}'.format(group)].mean()
-    return groupby
+    # convert input to datetime object
+    start_time_dt = datetime.datetime.strptime(start_time, '%H:%M').time()
+    end_time_dt = datetime.datetime.strptime(end_time, '%H:%M').time()
+
+    #vod_stops[time_col] = vod_stops[time_col].astype(str)
+    # inclusive of start and end time
+    vod_stops = vod_stops[(vod_stops[time_col] >= start_time_dt) & (vod_stops[time_col] <= end_time_dt)]
+
+    vod_count = vod_stops.groupby('is_dark')[vod_stops.columns.values[0]].agg({'total_count': 'count'})
+    vod_stops =(vod_stops
+    .groupby(['is_dark', group_col], as_index=False)[vod_stops.columns.values[0]]
+    .agg({'race_count': 'count'})
+    .merge(vod_count, how='left', on='is_dark'))
+    vod_stops['prop'] = vod_stops['race_count'] / vod_stops['total_count']
+    vod_stops.drop(['race_count', 'total_count'], axis=1, inplace=True)
+    vod_prop = vod_stops.pivot_table(values='prop', index='is_dark', columns=group_col)
+
+    #vod_stops['is_{}'.format(group)] = (vod_stops[group_col] == group).astype(int)
+    #groupby = vod_stops.groupby(['is_dark'])['is_{}'.format(group)].mean()
+    return vod_prop
