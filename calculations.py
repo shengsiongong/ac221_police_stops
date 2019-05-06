@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from astral import Astral, AstralGeocoder, Location
 import datetime
 
-
+ 
 def calc_group_size(stops_df, groupby_cols, include_prop = True):
     """
     Calculates the size of the groups formed by grouping stops_df by groupby_cols.
@@ -216,7 +216,7 @@ def compare_rates(rate_name, rates, majority_group, minority_groups, group_col):
         rates_df.reset_index(inplace=True)
     rates_df = (rates_df
     .melt(id_vars=index_cols+[majority_group+ '_' + rate_name],
-    #value_vars=minority_groups,
+    value_vars=minority_groups,
     value_name='minority' + '_' + rate_name)
     .rename({group_col: 'minority_group'}, axis=1))
     if len(index_cols) > 0:
@@ -324,8 +324,8 @@ def calc_vod_rate(vod_stops, start_time, end_time, group_col = 'subject_race', t
     start_time_dt = datetime.datetime.strptime(start_time, '%H:%M').time()
     end_time_dt = datetime.datetime.strptime(end_time, '%H:%M').time()
 
-    #vod_stops[time_col] = vod_stops[time_col].astype(str)
     # inclusive of start and end time
+    
     vod_stops = vod_stops[(vod_stops[time_col] >= start_time_dt) & (vod_stops[time_col] <= end_time_dt)]
 
     vod_count = vod_stops.groupby('is_dark')[vod_stops.columns.values[0]].agg({'total_count': 'count'})

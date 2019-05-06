@@ -24,6 +24,7 @@ def plot_rates_comparison(rate_name, hit_rates_comparison, majority_group, minor
     min_lim: min limit of graph for both x and y.
     max_lim: max limit of graph for both x and y.
     """
+
     plt.style.use('ggplot')
     g = sns.FacetGrid(hit_rates_comparison, col=minority_col, height = 5)
     #g.map(plt.grid)
@@ -41,7 +42,7 @@ def plot_rates_comparison(rate_name, hit_rates_comparison, majority_group, minor
         .set(xlim=(min_lim,max_lim) , ylim=(min_lim,max_lim)))
 
         # add legend
-        plt.scatter([], [], s=50, edgecolors='black', facecolors='none', label='num_searches')
+        plt.scatter([], [], s=50, edgecolors='black', facecolors='none', label=marker_size_col)
         h, l = plt.gca().get_legend_handles_labels()
         legend = {labels: handles for handles, labels in zip(h,l)}
         g.add_legend(legend, title=r'$size \propto magnitude$',labelspacing=2);
